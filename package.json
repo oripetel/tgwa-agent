@@ -1,0 +1,27 @@
+{
+    "name": "tgwa-agent",
+    "version": "1.0.0",
+    "description": "A Telegram-based assistant for scheduling WhatsApp messages using GPT and Whisper.",
+    "main": "src/index.js",
+    "scripts": {
+      "start": "node src/index.js"
+    },
+    "keywords": [
+      "telegram",
+      "whatsapp",
+      "gpt",
+      "whisper",
+      "scheduler",
+      "bot"
+    ],
+    "author": "spooky ori",
+    "license": "MIT",
+    "dependencies": {
+      "dotenv": "^16.4.5",
+      "node-telegram-bot-api": "^0.61.0",
+      "openai": "^4.33.0",
+      "qrcode": "^1.5.1",
+      "whatsapp-web.js": "^1.23.0"
+    }
+  }
+  
