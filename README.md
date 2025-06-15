@@ -1,7 +1,7 @@
 <div align="center">
   <br />
   <p>
-    <img src="https://raw.githubusercontent.com/yourUser/tgwa-agent/main/media/logo.svg" width="360" alt="tgwa-agent logo" />
+    <img src="https://raw.githubusercontent.com/oripetel/tgwa-agent/logo.png" width="360" alt="tgwa-agent logo" />
   </p>
   <h1><code>tgwa-agent</code></h1>
   <p><strong>🎯 Telegram-Controlled WhatsApp Scheduler – Powered by GPT & Whisper</strong></p>
