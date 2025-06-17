@@ -31,20 +31,30 @@ class WhatsAppClient {
 
     this.client.once('qr', async qr => {
       try {
-        const buffer = await QRCode.toBuffer(qr);
-        await this.bot.sendPhoto(chatId, { filename: 'qr.png', content: buffer }, {
+        const buf = await QRCode.toBuffer(qr);
+        if (!buf?.length) throw new Error('QR buffer is empty');
+    
+        // Send the QR
+        await this.bot.sendPhoto(chatId, buf, {
           caption: '📲 Scan this QR to link WhatsApp.'
         });
+    
+        /* ⏲️  Start 60-second expiry timer */
+        this.expired = false;
+        clearTimeout(this.expiryTimer);             // safety: clear any previous
         this.expiryTimer = setTimeout(() => {
           if (!this.scheduler.isReady()) {
             this.expired = true;
-            this.bot.sendMessage(chatId,
+            this.bot.sendMessage(
+              chatId,
               '⌛️ QR code expired. Please send /start to try again.'
             );
           }
         }, 60_000);
-      } catch (err) {
-        logger.error('❌ Failed to send QR code to Telegram.', err);
+    
+      } catch (e) {
+        logger.error('❌ Failed to send QR code to Telegram.');
+        console.error(e);
       }
     });
 
