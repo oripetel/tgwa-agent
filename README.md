@@ -17,7 +17,7 @@
 **`tgwa-agent` is a voice-aware, natural-language WhatsApp scheduling assistant** – fully controlled via Telegram.
 
 - ⌨️ Send commands like: `שלח לאמא מחר ב־8 בבוקר "בוקר טוב!"`
-- 🎙️ Send voice messages — Whisper transcribes and interprets them
+- 🎙️ Send voice messages:  Whisper transcribes and interprets them
 - 🧠 GPT understands, extracts name + time + message
 - ✅ WhatsApp sends at the right moment
 
@@ -72,7 +72,7 @@ Voice works too:
 
 ```text
 🎤 You (voice): תגיד לשילה מחר בבוקר שיביא את המפתח
-🤖 Bot: ✅ מבוצע – מתוזמן לשילה ל־08:00 מחר.
+🤖 Bot: ✅ מבוצע מתוזמן לשילה ל־08:00 מחר.
 ```
 
 ---
@@ -141,16 +141,15 @@ OPENAI_API_KEY=sk-...
 ## 📅 Roadmap
 
 * [ ] Multi-user support
+* [ ] Dual-platform control (Telegram & Discord)
 * [ ] Persistent DB queue (Mongo/Supabase)
-* [ ] Web dashboard for managing messages
-* [ ] Forwarding WhatsApp replies to Telegram
 
 ---
 
 ## 🙋 FAQ
 
 **Q:** Does this violate WhatsApp terms?
-**A:** Yes. Like `whatsapp-web.js` itself, this is a headless client — use only with caution and for personal automation.
+**A:** Yes. Like `whatsapp-web.js` itself, this is a headless client use only with caution and for personal automation.
 
 **Q:** Can it handle more than one user?
 **A:** Not yet. You can fork and add user auth via Telegram `chat.id`.
