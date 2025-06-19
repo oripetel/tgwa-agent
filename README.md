@@ -55,7 +55,7 @@
 
 ## 📸 Demo
 
-> 🧠 Coming soon – video walkthrough and screen captures
+[![Watch the demo](https://img.youtube.com/vi/LC_4t9GFH4A/0.jpg)](https://www.youtube.com/watch?v=LC_4t9GFH4A)
 
 ---
 
